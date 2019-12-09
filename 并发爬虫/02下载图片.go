@@ -19,7 +19,10 @@ var (
 	randomMT   sync.Mutex
 
 	//图片存储地址
-	imgDir = `D:\BJBlockChain1803\demos\W4\day5\imgs\`
+	//imgDir = `D:\桌面\爬虫图片\`
+	imgDir = `D:\桌面\爬虫图片\`
+
+
 )
 
 /*生成[start,end)之间的随机数*/
@@ -65,7 +68,7 @@ func GetPageImginfos(url string) []map[string]string {
 
 	re := regexp.MustCompile(reImg)
 	rets := re.FindAllStringSubmatch(html, -1)
-	fmt.Println("捕获图片张数：", len(rets))
+	//fmt.Println("捕获图片张数：", len(rets))
 
 	imginfos := make([]map[string]string, 0)
 	for _, ret := range rets {
@@ -102,7 +105,7 @@ func init() {
 }
 
 func DownloadImgWithClient(url string, filename string) {
-	fmt.Println("DownloadImgWithClient...")
+	//fmt.Println("DownloadImgWithClient...")
 	resp, err := httpClient.Get(url)
 	if err != nil {
 		fmt.Println(filename, "下载失败！")
@@ -121,7 +124,7 @@ func DownloadImgWithClient(url string, filename string) {
 }
 
 func DownloadImg(url string, filename string) {
-	fmt.Println("DownloadImg...")
+	//fmt.Println("DownloadImg...")
 	resp, _ := http.Get(url)
 	defer resp.Body.Close()
 
