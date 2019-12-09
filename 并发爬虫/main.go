@@ -13,7 +13,7 @@ var (
 )
 
 func main() {
-	baseUrl := "https://www.duotoo.com/zt/rbmn/index"
+	baseUrl := "https://www.duotoo.com/meinvxiezhen/index"
 	for i := 1; i < 5; i++ {
 		var url string
 		if i != 1 {
