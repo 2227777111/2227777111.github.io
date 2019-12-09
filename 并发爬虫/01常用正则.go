@@ -102,6 +102,7 @@ func spiderImgName() {
 		//imgUrl := ret[1]
 		//fmt.Println(ret[0],imgUrl,GetImgNameFromImgurl(imgUrl))
 		fmt.Println(ret[0])
+
 	}
 }
 
